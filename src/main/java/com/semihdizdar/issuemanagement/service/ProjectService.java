@@ -1,5 +1,6 @@
 package com.semihdizdar.issuemanagement.service;
 
+import com.semihdizdar.issuemanagement.dto.ProjectDto;
 import com.semihdizdar.issuemanagement.entity.Project;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -10,11 +11,12 @@ public interface ProjectService {
 
 
 
-    Project save(Project project);
+    ProjectDto save(ProjectDto project);
 
-    List<Project> getByProjectCode(String projectCode);
-    List<Project> getByProjectCodeContains(String projectCode);
-    Project getById(Long Id);
+    Project getByProjectCode(String projectCode);
+    Project getByProjectCodeContains(String projectCode);
+    ProjectDto getById(Long Id);
     Page<Project> getAllPageable(Pageable pageable);
+    ProjectDto update(Long id, ProjectDto project);
     Boolean delete(Project project);
 }

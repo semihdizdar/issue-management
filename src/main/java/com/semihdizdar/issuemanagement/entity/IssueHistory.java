@@ -14,6 +14,7 @@ import javax.persistence.*;
 @Table(name="issue_History")
 public class IssueHistory extends BaseEntity {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;

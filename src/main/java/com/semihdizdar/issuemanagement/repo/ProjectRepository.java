@@ -1,5 +1,6 @@
 package com.semihdizdar.issuemanagement.repo;
 
+import com.semihdizdar.issuemanagement.dto.ProjectDto;
 import com.semihdizdar.issuemanagement.entity.Project;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -12,7 +13,7 @@ public interface ProjectRepository extends JpaRepository<Project,Long> {
 
     Project getByProjectCode(String projectCode);
 
-    Project getByProjectCodeAndIdNot(String projectCode, Long id);
+    ProjectDto getByProjectCodeAndIdNot(String projectCode, Long id);
 
     List<Project> getByProjectCodeContains(String projectCode);
 
